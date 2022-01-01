@@ -1,0 +1,116 @@
+.modal-create__playlist {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #01061077;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  //   transform: scale(0);
+  transition: all 0.25s linear;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    // transform: scale(1);
+  }
+  .modal-form {
+    background-color: #192f60;
+    border-radius: 10px;
+    width: 320px;
+    padding: 25px 20px 20px;
+    position: relative;
+    .button-submit {
+      text-transform: uppercase;
+      outline: none;
+      border: 0;
+      width: 100%;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 20px;
+      color: #eee;
+      margin-top: 16px;
+      background-color: $blue;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &__public,
+    &__randomplay {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      .caption {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+      }
+      .desc {
+        font-size: 1.2rem;
+        color: #999;
+      }
+      .checkbox {
+        display: flex;
+        align-items: center;
+        input {
+          display: none;
+          &:checked + label .circle {
+            transform: translateX(15px);
+          }
+          &:checked + label {
+            background-color: $blue;
+          }
+        }
+        label {
+          display: inline-block;
+          width: 30px;
+          height: 15px;
+          background-color: #999;
+          border-radius: 20px;
+          padding: 2px;
+          transition: all 0.25s ease;
+          .circle {
+            transform: translateX(0);
+            @include size(11px);
+            border-radius: 50%;
+            background-color: white;
+            transition: all 0.25s ease;
+          }
+        }
+      }
+    }
+    .input-playlist {
+      outline: none;
+      border: 0;
+      width: 100%;
+      padding: 15px;
+      border-radius: 20px;
+      background-color: #304470;
+      margin: 12px 0 20px;
+      color: white;
+      font-weight: 400;
+      &::-webkit-input-placeholder {
+        color: #ccc;
+      }
+    }
+    &__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+    &__heading {
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.8rem;
+    }
+  }
+}
