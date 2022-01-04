@@ -126,6 +126,9 @@
             <span class="icon-arrow-left"><i class="fas fa-arrow-left"></i></span>
             <span class="icon-arrow-right"><i class="fas fa-arrow-right"></i></span>
           </div>
+          <div class="mobile-button">
+            <div></div>
+          </div>
           <div class="container-header__search">
             <div class="container-header__search--content">
               <label for="search"><i class="fas fa-search"></i></label>
@@ -441,6 +444,17 @@
                       </div>
                       <div class="album-list__heading">Lạc trôi</div>
                     </li>
+                    <li class="album-list__item">
+                      <div class="album-list__image">
+                        <img src="./assets/img/imgage_interface.jpg" alt="">
+                        <div class="album-list__image-overplay">
+                          <i class="fas fa-heart"></i>
+                            <span><i class="fas fa-play"></i></span>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                      </div>
+                      <div class="album-list__heading">Lạc trôi</div>
+                    </li>
                    
                   </ul>
                 </div>
@@ -475,6 +489,9 @@
       </div>
     </main>
     <div class="music" id="music">
+      <div class="progress-mobile">
+        <div></div>
+      </div>
       <div class="music-main">
         <div class="music-info">
           <div class="music-image">
@@ -492,9 +509,13 @@
         </div>
         <div class="music-container">
           <ul class="music-player">
+            <li class="music-player__item"><i class="far fa-heart"></i></li>
             <li class="music-player__item music-random"><i class="fas fa-random"></i></li>
             <li class="music-player__item music-prev"><i class="fas fa-step-backward"></i></li>
-            <li class="music-player__item music-play"><i class="far fa-play-circle"></i></li>
+            <li class="music-player__item music-play">
+              <!-- <i class="far fa-play-circle"></i> -->
+              <i class="fas fa-play"></i>
+            </li>
             <li class="music-player__item music-next"><i class="fas fa-step-forward"></i></li>
             <li class="music-player__item music-redo"><i class="fas fa-repeat"></i></li>
           </ul>
@@ -523,6 +544,38 @@
           <li class="music-control__item music-control__slider"><i class="fas fa-sliders-h"></i></li>
         </ul>
       </div>
+      <ul class="music-nav__mobile">
+        <li class="music-nav__mobile-item active">
+          <a href="#">
+            <i class="fab fa-itunes"></i>
+            <span>Cá nhân</span>
+          </a>
+        </li>
+        <li class="music-nav__mobile-item">
+          <a href="#">
+            <i class="fas fa-record-vinyl"></i>
+            <span>Khám phá</span>
+          </a>
+        </li>
+        <li class="music-nav__mobile-item">
+          <a href="#">
+            <i class="fab fa-facebook-messenger"></i>
+            <span>#zingchart</span>
+          </a>
+        </li>
+        <li class="music-nav__mobile-item">
+          <a href="#">
+            <i class="fas fa-radiation-alt"></i>
+            <span>Radio</span>
+          </a>
+        </li>
+        <li class="music-nav__mobile-item">
+          <a href="#">
+            <i class="fas fa-rss"></i>
+            <span>Theo dõi</span>
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="modal-create__playlist">
       <form action="" class="modal-form">
@@ -558,6 +611,7 @@
         <button type="submit" class="button-submit">Tạo mới</button>
       </form>
     </div>
+
   </div>
   <script src="./assets/js/main.js"></script>
 </body>

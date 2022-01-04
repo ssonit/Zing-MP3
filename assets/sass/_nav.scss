@@ -6,6 +6,8 @@
   left: 0;
   bottom: 0;
   color: white;
+  transform: translateX(0);
+  transition: transform 0.4s ease;
   .nav {
     &-main {
       height: 100%;

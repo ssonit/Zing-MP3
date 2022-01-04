@@ -115,23 +115,43 @@
   &-container {
     width: 500px;
   }
+  .progress-mobile {
+    display: none;
+  }
+  &-nav__mobile {
+    display: none;
+  }
   &-player {
     display: flex;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
+    width: 60%;
     margin-bottom: 10px;
+    &__item:first-child {
+      display: none;
+    }
     &__item {
       cursor: pointer;
       font-size: 1.8rem;
     }
   }
   &-play {
-    font-size: 3.5rem;
+    font-size: 2rem;
+    padding: 4px;
     transition: all 0.25s ease;
+    border: 2px solid white;
+    border-radius: 50%;
+    i {
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &:hover {
       color: $blue;
+      border-color: $blue;
     }
   }
   &-random.active,

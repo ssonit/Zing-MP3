@@ -54,6 +54,7 @@ window.addEventListener("load", function () {
   const progress = document.querySelector(".progress");
   const controlVolume = document.querySelector(".music-control__volume");
   const songContentList = document.querySelector(".container-main__layout .overview .song-content__list");
+  const progressMobile = document.querySelector(".progress-mobile div");
   let playing = true;
   let index = JSON.parse(localStorage.getItem("index")) || 0;
 
@@ -129,18 +130,27 @@ window.addEventListener("load", function () {
     updateDuration();
   })
   
+  // Next music
   nextBtn.addEventListener("click", function () {
     handleChangeMusic(1);
   });
+
+  // Previous music
   prevBtn.addEventListener("click", function () {
     handleChangeMusic(-1);
   });
+
+  // Ended music 
   audio.addEventListener("ended", function () {
     handleChangeMusic(0);
   });
+
+  // Random music
   musicRandom.addEventListener("click", function() {
     musicRandom.classList.toggle("active");
-  })
+  });
+
+  // Repeat music
   musicRedo.addEventListener("click", function() {
     musicRedo.classList.toggle("active");
   })
@@ -154,6 +164,7 @@ window.addEventListener("load", function () {
     const { duration, currentTime } = audio;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
+    progressMobile.style.width = `${progressPercent}%`;
     musicCurrent.textContent = convertTime(currentTime);
   }
   function convertTime(time) {
@@ -173,16 +184,16 @@ window.addEventListener("load", function () {
       audio.play();
       musicImage.classList.add("active");
       songContentList.querySelector(".song-content__item.active .song-content__info-overplay").classList.add("active");
-      playBtn.querySelector("i").classList.remove("fa-play-circle");
-      playBtn.querySelector("i").classList.add("fa-pause-circle");
+      playBtn.querySelector("i").classList.remove("fa-play");
+      playBtn.querySelector("i").classList.add("fa-pause");
       playing = false;
     }
     else {
       audio.pause();
       musicImage.classList.remove("active");
       songContentList.querySelector(".song-content__item.active .song-content__info-overplay").classList.remove("active");
-      playBtn.querySelector("i").classList.add("fa-play-circle");
-      playBtn.querySelector("i").classList.remove("fa-pause-circle");
+      playBtn.querySelector("i").classList.add("fa-play");
+      playBtn.querySelector("i").classList.remove("fa-pause");
       playing = true;
     }
   }
@@ -440,4 +451,12 @@ window.addEventListener("load", function () {
   </li>`;
   containerPlaylistList.insertAdjacentHTML("beforeend", template);
   }
+
+  // Mobile menu
+  const mobileBtn = document.querySelector(".mobile-button");
+  const nav = document.querySelector("#nav");
+  mobileBtn.addEventListener("click", function() {
+    mobileBtn.classList.toggle("active");
+    nav.classList.toggle("active");
+  })
 })

@@ -1,0 +1,202 @@
+@media screen and (max-width: 1023px) {
+  .block {
+    padding: 0 30px;
+  }
+  .hide-on-tablet {
+    display: none;
+  }
+  #nav {
+    transform: translateX(-100%);
+    top: $header-height;
+    z-index: 2;
+    &.active {
+      transform: translateX(0);
+    }
+    .nav-vip,
+    .nav-library,
+    .nav-playlist {
+      display: none;
+    }
+  }
+  #main {
+    width: 100%;
+    left: 0;
+    .container .modal {
+      width: 390px;
+      top: calc(100% + 10px);
+      right: 0;
+      height: 80vh;
+    }
+    .container-header {
+      width: 100%;
+      left: 0;
+      justify-content: space-between;
+      gap: 0 16px;
+      .mobile-button {
+        display: flex;
+      }
+      &__btn {
+        display: none;
+      }
+      &__menu {
+        margin-left: unset;
+      }
+    }
+    .container-main__layout .overview .playlist-list,
+    .container-main__layout .overview .album-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  #music {
+    z-index: 3;
+    .music-control__item:first-child,
+    .music-control__item:nth-child(2),
+    .music-control__item:nth-child(4),
+    .music-icon {
+      display: none;
+    }
+    .music-container {
+      width: 400px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .block {
+    padding: 0 15px;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+  #main {
+    height: calc(100% - 100px);
+    .container-header {
+      padding: 15px;
+    }
+    .container-main__profile {
+      padding: 0 15px;
+      position: relative;
+    }
+    .container-main__image {
+      width: 58%;
+    }
+    .container-header__item:nth-child(2),
+    .container-header__item:last-child {
+      display: none;
+    }
+    .container-header .mobile-button {
+      display: none;
+    }
+    .container-main__vip span {
+      display: none;
+    }
+    .container-main__vip .btn {
+      padding: 4px 10px;
+      &:first-child {
+        position: absolute;
+        top: 0;
+        left: 15px;
+      }
+    }
+    .container-main__navigation {
+      margin: 40px 0;
+    }
+    .container-main__list li:nth-child(4),
+    .container-main__list li:nth-child(6),
+    .container-main__list li:nth-child(7) {
+      display: none;
+    }
+    .container-main__layout .overview .song-content__images {
+      display: none;
+    }
+    .container .modal {
+      box-shadow: -1px -1px 10px 10px #3a599c80;
+    }
+    .container-main__layout .overview .playlist-list,
+    .container-main__layout .overview .album-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  #music {
+    height: auto;
+    .music-control,
+    .music-progress,
+    .music-random,
+    .music-prev,
+    .music-redo {
+      display: none;
+    }
+    .music-container {
+      width: auto;
+    }
+    .music-player {
+      width: auto;
+      gap: 0 30px;
+      margin-bottom: 0;
+      &__item {
+        font-size: 1.5rem;
+      }
+      &__item:first-child {
+        display: block;
+      }
+    }
+    .music-play {
+      border-color: transparent;
+    }
+    .music-image {
+      @include size(45px);
+    }
+    .music-main {
+      padding: 5px 10px;
+    }
+    .music-user__name {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+    .music-user__author {
+      font-size: 1.2rem;
+    }
+    .music-nav__mobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-item {
+        width: 20%;
+        &.active i {
+          color: $blue;
+        }
+        &.active span {
+          color: $blue;
+        }
+      }
+      &-item a {
+        display: flex;
+        flex-direction: column;
+        color: #999;
+        align-items: center;
+        padding: 6px;
+        i {
+          margin-bottom: 6px;
+          transition: all 0.25s linear;
+        }
+        span {
+          font-size: 1.2rem;
+          transition: all 0.25s linear;
+        }
+      }
+    }
+    .progress-mobile {
+      position: absolute;
+      transform: translateY(-100%);
+      display: block;
+      width: 100%;
+      height: 2px;
+      div {
+        width: 0;
+        height: 100%;
+        background-color: $blue;
+        border-radius: 6px;
+        transition: all 0.25s ease;
+      }
+    }
+  }
+}
