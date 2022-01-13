@@ -1,197 +1,199 @@
-.music {
+#music {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: $bg-music;
   height: $music-height;
-  &-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 16px;
-    color: white;
-  }
-  &-info {
-    display: flex;
-    align-items: center;
-    gap: 0 16px;
-  }
-  &-image {
-    width: 60px;
-    height: 60px;
-    position: relative;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      animation: rotate 3s infinite forwards linear;
-      animation-play-state: paused;
-    }
-    &.active img {
-      animation-play-state: running;
-    }
-    // &::after {
-    //   content: "";
-    //   background-color: white;
-    //   width: 15px;
-    //   height: 15px;
-    //   border-radius: 50%;
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    // }
-  }
-  &-user {
-    display: flex;
-    flex-direction: column;
-    &__name {
-      width: 120px;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-    &__author {
-      font-size: 1.3rem;
-      width: 120px;
-      font-weight: 400;
-    }
-  }
-  &-icon {
-    display: flex;
-    align-items: center;
-    gap: 0 16px;
-    i {
-      cursor: pointer;
-      @include size(30px);
-      background-color: transparent;
+  .music {
+    &-main {
       display: flex;
-      justify-content: center;
       align-items: center;
-      border-radius: 6px;
-      transition: 0.25s linear;
-      &:hover {
-        background-color: rgb(95, 91, 91);
-      }
+      justify-content: space-between;
+      padding: 10px 16px;
+      color: white;
     }
-  }
-  &-control {
-    display: flex;
-    align-items: center;
-    gap: 0 20px;
-    &__item {
-      cursor: pointer;
-      font-size: 1.6rem;
+    &-info {
       display: flex;
-      justify-content: center;
       align-items: center;
-      span {
-        display: inline-block;
-        cursor: auto;
-        @include size(2px, 30px);
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
+      gap: 0 16px;
+    }
+    &-image {
+      width: 60px;
+      height: 60px;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        animation: rotate 3s infinite forwards linear;
+        animation-play-state: paused;
+      }
+      &.active img {
+        animation-play-state: running;
+      }
+      // &::after {
+      //   content: "";
+      //   background-color: white;
+      //   width: 15px;
+      //   height: 15px;
+      //   border-radius: 50%;
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      // }
+    }
+    &-user {
+      display: flex;
+      flex-direction: column;
+      &__name {
+        width: 120px;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+      &__author {
+        font-size: 1.3rem;
+        width: 120px;
+        font-weight: 400;
       }
     }
-    &__slider {
-      padding: 10px;
-      background-color: #1e2f54;
-    }
-    .progress-volume {
-      height: 2px;
-      cursor: pointer;
-      border-radius: 2px;
-      overflow: hidden;
-      width: 100px;
-      margin: 0 -10px;
-      transition: all 0.25s linear;
-      &:hover {
-        overflow: unset;
-        height: 6px;
+    &-icon {
+      display: flex;
+      align-items: center;
+      gap: 0 16px;
+      i {
+        cursor: pointer;
+        @include size(30px);
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        transition: 0.25s linear;
+        &:hover {
+          background-color: rgb(95, 91, 91);
+        }
       }
     }
-  }
-  &-container {
-    width: 500px;
-  }
-  .progress-mobile {
-    display: none;
-  }
-  &-nav__mobile {
-    display: none;
-  }
-  &-player {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-    margin-bottom: 10px;
-    &__item:first-child {
+    &-control {
+      display: flex;
+      align-items: center;
+      gap: 0 20px;
+      &__item {
+        cursor: pointer;
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          display: inline-block;
+          cursor: auto;
+          @include size(2px, 30px);
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 10px;
+        }
+      }
+      &__slider {
+        padding: 10px;
+        background-color: #1e2f54;
+      }
+      .progress-volume {
+        height: 2px;
+        cursor: pointer;
+        border-radius: 2px;
+        overflow: hidden;
+        width: 100px;
+        margin: 0 -10px;
+        transition: all 0.25s linear;
+        &:hover {
+          overflow: unset;
+          height: 6px;
+        }
+      }
+    }
+    &-container {
+      width: 500px;
+    }
+    .progress-mobile {
       display: none;
     }
-    &__item {
-      cursor: pointer;
-      font-size: 1.8rem;
+    &-nav__mobile {
+      display: none;
     }
-  }
-  &-play {
-    font-size: 2rem;
-    padding: 4px;
-    transition: all 0.25s ease;
-    border: 2px solid white;
-    border-radius: 50%;
-    i {
-      width: 25px;
-      height: 25px;
+    &-player {
       display: flex;
-      justify-content: center;
+      margin: 0 auto;
       align-items: center;
-    }
-    &:hover {
-      color: $blue;
-      border-color: $blue;
-    }
-  }
-  &-random.active,
-  &-redo.active {
-    color: $blue;
-  }
-  &-random,
-  &-prev,
-  &-next,
-  &-redo {
-    transition: all 0.25s ease;
-  }
-  &-random:hover,
-  &-prev:hover,
-  &-next:hover,
-  &-redo:hover {
-    color: $blue;
-  }
-  &-progress {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    &__range {
-      flex: 1;
-      height: 2px;
-      border-radius: 2px;
-      cursor: pointer;
-      overflow: hidden;
-      margin: 0 5px;
-      transition: all 0.25s linear;
-      &:hover {
-        overflow: unset;
+      justify-content: space-between;
+      width: 60%;
+      margin-bottom: 10px;
+      &__item:first-child {
+        display: none;
+      }
+      &__item {
+        cursor: pointer;
+        font-size: 1.8rem;
       }
     }
-  }
-  &-current,
-  &-duration {
-    font-size: 1.4rem;
-    width: 48px;
-    text-align: center;
+    &-play {
+      font-size: 2rem;
+      padding: 4px;
+      transition: all 0.25s ease;
+      border: 2px solid white;
+      border-radius: 50%;
+      i {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &:hover {
+        color: $blue;
+        border-color: $blue;
+      }
+    }
+    &-random.active,
+    &-redo.active {
+      color: $blue;
+    }
+    &-random,
+    &-prev,
+    &-next,
+    &-redo {
+      transition: all 0.25s ease;
+    }
+    &-random:hover,
+    &-prev:hover,
+    &-next:hover,
+    &-redo:hover {
+      color: $blue;
+    }
+    &-progress {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      &__range {
+        flex: 1;
+        height: 2px;
+        border-radius: 2px;
+        cursor: pointer;
+        overflow: hidden;
+        margin: 0 5px;
+        transition: all 0.25s linear;
+        &:hover {
+          overflow: unset;
+        }
+      }
+    }
+    &-current,
+    &-duration {
+      font-size: 1.4rem;
+      width: 48px;
+      text-align: center;
+    }
   }
 }

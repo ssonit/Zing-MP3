@@ -44,6 +44,9 @@
           font-size: 1.8rem;
           font-weight: 500;
           cursor: pointer;
+          i {
+            pointer-events: none;
+          }
         }
       }
       &__search {
@@ -353,6 +356,7 @@
     }
     &-main {
       padding-top: $header-height;
+      display: none;
       &__profile {
         display: flex;
         justify-content: center;

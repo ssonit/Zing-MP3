@@ -459,4 +459,243 @@ window.addEventListener("load", function () {
     mobileBtn.classList.toggle("active");
     nav.classList.toggle("active");
   })
+
+  //Container Body Mixtape carousel
+  const mixtape = {
+    next: document.querySelectorAll(".container-body__mixtape .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__mixtape .child-icon i")[0],
+    row: document.querySelector(".container-body__mixtape .child-row"),
+    item: document.querySelectorAll(".container-body__mixtape .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(mixtape);
+
+  //Container Body Suggest carousel  
+  const suggest = {
+    next: document.querySelectorAll(".container-body__suggest .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__suggest .child-icon i")[0],
+    row: document.querySelector(".container-body__suggest .child-row"),
+    item: document.querySelectorAll(".container-body__suggest .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(suggest)
+
+  //Container Body Recent carousel  
+  const recent = {
+    next: document.querySelectorAll(".container-body__recent .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__recent .child-icon i")[0],
+    row: document.querySelector(".container-body__recent .child-row"),
+    item: document.querySelectorAll(".container-body__recent .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(recent)
+
+  //Container Body Mix carousel  
+  const mix = {
+    next: document.querySelectorAll(".container-body__mix .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__mix .child-icon i")[0],
+    row: document.querySelector(".container-body__mix .child-row"),
+    item: document.querySelectorAll(".container-body__mix .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(mix)
+
+  //Container Body Category carousel  
+  const category = {
+    next: document.querySelectorAll(".container-body__category .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__category .child-icon i")[0],
+    row: document.querySelector(".container-body__category .child-row"),
+    item: document.querySelectorAll(".container-body__category .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(category)
+
+  //Container Body Discover carousel  
+  const discover = {
+    next: document.querySelectorAll(".container-body__discover .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__discover .child-icon i")[0],
+    row: document.querySelector(".container-body__discover .child-row"),
+    item: document.querySelectorAll(".container-body__discover .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(discover);
+
+  //Container Body International carousel  
+  const international = {
+    next: document.querySelectorAll(".container-body__international .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__international .child-icon i")[0],
+    row: document.querySelector(".container-body__international .child-row"),
+    item: document.querySelectorAll(".container-body__international .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(international)
+
+  //Container Body Romance carousel  
+  const romance = {
+    next: document.querySelectorAll(".container-body__romance .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__romance .child-icon i")[0],
+    row: document.querySelector(".container-body__romance .child-row"),
+    item: document.querySelectorAll(".container-body__romance .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(romance)
+
+  //Container Body Top 100 carousel  
+  const top = {
+    next: document.querySelectorAll(".container-body__top .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__top .child-icon i")[0],
+    row: document.querySelector(".container-body__top .child-row"),
+    item: document.querySelectorAll(".container-body__top .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(top)
+
+  //Container Body Concert carousel  
+  const concert = {
+    next: document.querySelectorAll(".container-body__concert .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__concert .child-icon i")[0],
+    row: document.querySelector(".container-body__concert .child-row"),
+    item: document.querySelectorAll(".container-body__concert .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(concert)
+
+  //Container Body hits carousel  
+  const hits = {
+    next: document.querySelectorAll(".container-body__hits .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__hits .child-icon i")[0],
+    row: document.querySelector(".container-body__hits .child-row"),
+    item: document.querySelectorAll(".container-body__hits .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(hits)
+
+  //Container Body live carousel  
+  const live = {
+    next: document.querySelector("#main .container-body .container-body__live .icon-arrow-right"),
+    prev:  document.querySelector("#main .container-body .container-body__live .icon-arrow-left"),
+    row: document.querySelector("#main .container-body .container-body__live .live-list"),
+    item: document.querySelectorAll("#main .container-body .container-body__live .live-list li"),
+    column: 6,
+    index: 0,
+    position: 0,
+  }
+  carousel(live)
+
+
+
+  //Container Body Event carousel  
+  const event = {
+    next: document.querySelectorAll(".container-body__upcoming .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__upcoming .child-icon i")[0],
+    row: document.querySelector(".container-body__upcoming .child-row"),
+    item: document.querySelectorAll(".container-body__upcoming .child-row__item"),
+    column: 3,
+    index: 0,
+    position: 0,
+  }
+  carousel(event)
+  
+
+  // Container body singer 
+  const singer = {
+    next: document.querySelector("#main .container-body__singer .icon-arrow-right"),
+    prev:  document.querySelector("#main .container-body__singer .icon-arrow-left"),
+    row: document.querySelector("#main .container-body__singer .singer-list"),
+    item: document.querySelectorAll("#main .container-body__singer .singer-list li"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(singer, 4000)
+
+
+  function carousel({next, prev, row, item, column, index, position}, timer = 0) {
+    const length = item.length;
+    next.addEventListener("click", function() {
+      handleChangeSlide(1);
+    })
+    prev.addEventListener("click", function() {
+      handleChangeSlide(-1);
+    })
+    if(timer !== 0) {
+      setInterval(() => {
+        if(index >= Math.ceil(length / column) - 1) {
+          index = -1;
+        }
+        index ++;
+        position = -1 * 100 * index;
+        row.style.transform = `translateX(${position}%)`;
+      }, timer);
+    }
+    function handleChangeSlide(num) {
+      if(num === 1){
+        if(index >= Math.ceil(length / column) - 1) {
+          return;
+        }
+        index ++;
+      }
+      else if(num === -1) {
+        if(index <= 0) {
+          return;
+        }
+        index --;
+      }
+      position = -1 * 100 * index;
+      row.style.transform = `translateX(${position}%)`;
+    }
+  }
+   
+
+  // Container tab
+  const containerTab = document.querySelectorAll("#main .container-tab");
+  const containerIconArrow = document.querySelectorAll("#main .container-header .container-header__btn span");
+  let indexTab = 0;
+  containerIconArrow[0].classList.add("hiddenIcon");
+  containerIconArrow[1].addEventListener("click", function(e) {
+    if(indexTab >= containerTab.length - 1) {
+      return;
+    }
+    indexTab ++;
+    if(indexTab >= containerTab.length - 1) {
+      e.target.classList.add("hiddenIcon");
+    }
+    containerIconArrow[0].classList.remove("hiddenIcon");
+    [...containerTab].forEach(item => item.classList.remove('active-tab'));
+    containerTab[indexTab].classList.add("active-tab");
+  })
+  containerIconArrow[0].addEventListener("click", function(e) {
+    if(indexTab <= 0) {
+      return;
+    }
+    indexTab --;
+    if(indexTab <= 0) {
+      e.target.classList.add("hiddenIcon");
+    }
+    containerIconArrow[1].classList.remove("hiddenIcon");
+    [...containerTab].forEach(item => item.classList.remove('active-tab'));
+    containerTab[indexTab].classList.add("active-tab");
+  })
 })

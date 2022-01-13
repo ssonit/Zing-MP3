@@ -1,3 +1,9 @@
+.block {
+  padding: 0 68px;
+}
+.hidden-tab {
+  display: none;
+}
 .wrapper {
   display: flex;
   align-items: center;
@@ -93,4 +99,12 @@ body {
   transform-origin: top left;
   transform: rotate(-45deg);
   left: 6px;
+}
+#main .container-tab.active-tab {
+  display: block;
+}
+.hiddenIcon {
+  cursor: default;
+  color: #13415c;
+  transition: all 0.4s ease;
 }
