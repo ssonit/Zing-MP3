@@ -176,6 +176,7 @@
           a {
             color: white;
             font-size: 1.2rem;
+            text-transform: capitalize;
             transition: all 0.25s linear;
             &:hover {
               color: $blue;
@@ -378,6 +379,7 @@
             &__singer {
               font-size: 1.2rem;
               margin-top: 8px;
+              text-transform: capitalize;
             }
           }
           &-percent {
@@ -552,6 +554,7 @@
               }
               &-heading {
                 font-size: 1.4rem;
+                text-transform: capitalize;
                 transition: all 0.4s ease;
                 &:hover {
                   color: $blue;
@@ -567,6 +570,9 @@
         }
       }
       &__release {
+        &-row {
+          overflow: hidden;
+        }
         &-list {
           display: flex;
           margin-left: -30px;
@@ -622,6 +628,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                flex: 1;
               }
               &-row {
                 display: flex;
@@ -662,6 +669,10 @@
                   text-overflow: ellipsis;
                   word-break: break-word;
                   line-height: 1.2;
+                  text-transform: capitalize;
+                }
+                p {
+                  text-transform: capitalize;
                 }
               }
             }
@@ -669,6 +680,7 @@
         }
       }
       &__song {
+        margin-top: 30px;
         .container-body__listsong {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -683,7 +695,8 @@
             &:hover {
               background-color: $bg-container-hover;
             }
-            &:hover .listsong-image__overplay {
+            &:hover .listsong-image__overplay,
+            &:hover .listsong-icon {
               opacity: 1;
               visibility: visible;
             }
@@ -746,6 +759,9 @@
                 display: flex;
                 align-items: center;
                 gap: 0 10px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.25s linear;
                 i {
                   @include size(30px);
                   border-radius: 50%;
@@ -758,6 +774,19 @@
                     background-color: #ccc;
                   }
                 }
+              }
+            }
+          }
+        }
+        .container-body__menu {
+          .child-content__singer {
+            a {
+              color: white;
+              font-size: 1.2rem;
+              text-transform: capitalize;
+              transition: all 0.25s linear;
+              &:hover {
+                color: $blue;
               }
             }
           }

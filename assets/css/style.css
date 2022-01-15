@@ -1978,6 +1978,7 @@ body {
 #main .container-body__mixtape .child-content__singer a, #main .container-body__mix .child-content__singer a, #main .container-body__international .child-content__singer a {
   color: white;
   font-size: 1.2rem;
+  text-transform: capitalize;
   transition: all 0.25s linear;
 }
 #main .container-body__mixtape .child-content__singer a:hover, #main .container-body__mix .child-content__singer a:hover, #main .container-body__international .child-content__singer a:hover {
@@ -2173,6 +2174,7 @@ body {
 #main .container-body__zingchart .zingchart-info__singer {
   font-size: 1.2rem;
   margin-top: 8px;
+  text-transform: capitalize;
 }
 #main .container-body__zingchart .zingchart-percent {
   font-weight: bold;
@@ -2348,6 +2350,7 @@ body {
 }
 #main .container-body__live .live-list li .live-heading {
   font-size: 1.4rem;
+  text-transform: capitalize;
   transition: all 0.4s ease;
 }
 #main .container-body__live .live-list li .live-heading:hover {
@@ -2357,6 +2360,9 @@ body {
   margin-top: 4px;
   font-size: 1.2rem;
   color: #d4d4da;
+}
+#main .container-body__release-row {
+  overflow: hidden;
 }
 #main .container-body__release-list {
   display: flex;
@@ -2414,6 +2420,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
 }
 #main .container-body__release-list li .release-row {
   display: flex;
@@ -2453,6 +2460,13 @@ body {
   text-overflow: ellipsis;
   word-break: break-word;
   line-height: 1.2;
+  text-transform: capitalize;
+}
+#main .container-body__release-list li .release-info p {
+  text-transform: capitalize;
+}
+#main .container-body__song {
+  margin-top: 30px;
 }
 #main .container-body__song .container-body__listsong {
   display: grid;
@@ -2470,7 +2484,7 @@ body {
 #main .container-body__song .container-body__listsong li:hover {
   background-color: #1f3461;
 }
-#main .container-body__song .container-body__listsong li:hover .listsong-image__overplay {
+#main .container-body__song .container-body__listsong li:hover .listsong-image__overplay, #main .container-body__song .container-body__listsong li:hover .listsong-icon {
   opacity: 1;
   visibility: visible;
 }
@@ -2532,6 +2546,9 @@ body {
   display: flex;
   align-items: center;
   gap: 0 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s linear;
 }
 #main .container-body__song .container-body__listsong li .listsong-icon i {
   width: 30px;
@@ -2545,6 +2562,15 @@ body {
 }
 #main .container-body__song .container-body__listsong li .listsong-icon i:hover {
   background-color: #ccc;
+}
+#main .container-body__song .container-body__menu .child-content__singer a {
+  color: white;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  transition: all 0.25s linear;
+}
+#main .container-body__song .container-body__menu .child-content__singer a:hover {
+  color: #3460f5;
 }
 #main .container-body__heard .container-body__child-header .heard-content {
   display: flex;
@@ -2724,7 +2750,7 @@ body {
   object-fit: cover;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1100px) {
   .block {
     padding: 0 30px;
   }
@@ -2782,9 +2808,45 @@ body {
   }
   #music .music-control__item:first-child,
 #music .music-control__item:nth-child(2),
-#music .music-control__item:nth-child(4),
 #music .music-icon {
     display: none;
+  }
+  #music .music-control {
+    position: relative;
+  }
+  #music .music-control__item:nth-child(3):hover ~ .music-control__item:nth-child(4) {
+    opacity: 1;
+    visibility: visible;
+  }
+  #music .music-control__item:nth-child(4):hover {
+    opacity: 1;
+    visibility: visible;
+  }
+  #music .music-control__item:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-40%, -100%);
+    background-color: black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+  #music .music-control__item:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 10px;
+    transform: translateY(100%);
   }
   #music .music-container {
     width: 400px;
@@ -2919,14 +2981,14 @@ body {
     font-size: 1.2rem;
     transition: all 0.25s linear;
   }
-  #music .progress-mobile {
+  #music .music .progress-mobile {
     position: absolute;
     transform: translateY(-100%);
     display: block;
     width: 100%;
     height: 2px;
   }
-  #music .progress-mobile div {
+  #music .music .progress-mobile div {
     width: 0;
     height: 100%;
     background-color: #3460f5;

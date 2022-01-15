@@ -592,6 +592,42 @@ window.addEventListener("load", function () {
   }
   carousel(hits)
 
+  //Container Body heard carousel  
+  const heard = {
+    next: document.querySelectorAll(".container-body__heard .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__heard .child-icon i")[0],
+    row: document.querySelector(".container-body__heard .child-row"),
+    item: document.querySelectorAll(".container-body__heard .child-row__item"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(heard)
+
+  //Container Body release carousel  
+  const release = {
+    next: document.querySelectorAll(".container-body__release .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__release .child-icon i")[0],
+    row: document.querySelector(".container-body__release .container-body__release-list"),
+    item: document.querySelectorAll(".container-body__release .container-body__release-list li"),
+    column: 4,
+    index: 0,
+    position: 0,
+  }
+  carousel(release)
+
+  //Container Body mv carousel  
+  const mv = {
+    next: document.querySelectorAll(".container-body__mv .child-icon i")[1],
+    prev:  document.querySelectorAll(".container-body__mv .child-icon i")[0],
+    row: document.querySelector(".container-body__mv .mv-list"),
+    item: document.querySelectorAll(".container-body__mv .mv-list li"),
+    column: 3,
+    index: 0,
+    position: 0,
+  }
+  carousel(mv)
+
   //Container Body live carousel  
   const live = {
     next: document.querySelector("#main .container-body .container-body__live .icon-arrow-right"),
@@ -603,6 +639,7 @@ window.addEventListener("load", function () {
     position: 0,
   }
   carousel(live)
+
 
 
 
