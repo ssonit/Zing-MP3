@@ -462,6 +462,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+#music .music-user .angle-down {
+  display: none;
+}
 #music .music-user__name {
   width: 120px;
   margin-bottom: 10px;
@@ -2914,6 +2917,79 @@ body {
   #music {
     height: auto;
   }
+  #music .music-main.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #061d4f;
+    flex-direction: column;
+    justify-content: unset;
+    padding: 10px 30px;
+  }
+  #music .music-main.active .music-info {
+    flex-direction: column-reverse;
+    position: relative;
+  }
+  #music .music-main.active .progress-container {
+    max-width: 80%;
+  }
+  #music .music-main.active .music-player__item {
+    font-size: 2.5rem;
+  }
+  #music .music-main.active .music-image {
+    width: 350px;
+    height: 350px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  #music .music-main.active .music-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: auto;
+  }
+  #music .music-main.active .music-player__item:first-child {
+    display: none;
+  }
+  #music .music-main.active .angle-down {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    font-size: 2.4rem;
+    cursor: pointer;
+    padding: 6px;
+  }
+  #music .music-main.active .music-random,
+#music .music-main.active .music-prev,
+#music .music-main.active .music-redo {
+    display: block;
+  }
+  #music .music-main.active .music-progress {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #music .music-main.active .music-player {
+    justify-content: center;
+    gap: 0 40px;
+  }
+  #music .music-main.active .music-user__name {
+    font-size: 2rem;
+    max-width: 180px;
+  }
+  #music .music-main.active .music-user__author {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  #music .music-main.active .music-play {
+    padding: 6px;
+  }
+  #music .music-main.active .music-control {
+    margin-top: 10px;
+    display: flex;
+  }
   #music .music-control,
 #music .music-progress,
 #music .music-random,
@@ -2941,6 +3017,7 @@ body {
   #music .music-image {
     width: 45px;
     height: 45px;
+    cursor: pointer;
   }
   #music .music-main {
     padding: 5px 10px;
@@ -2994,6 +3071,86 @@ body {
     background-color: #3460f5;
     border-radius: 6px;
     transition: all 0.25s ease;
+  }
+}
+@media screen and (max-width: 479px) {
+  #music .music-main.active .progress-container {
+    max-width: 60%;
+  }
+  #music .music-main.active .music-image {
+    width: 250px;
+    height: 250px;
+  }
+  #music .music-main.active .music-player {
+    gap: 0 25px;
+  }
+  #music .music-main.active .music-player__item {
+    font-size: 2rem;
+  }
+  #music .music-main.active .music-progress {
+    max-width: 250px;
+  }
+  #music .music-nav__mobile-item a span {
+    font-size: 1rem;
+  }
+  #music .music-nav__mobile-item a {
+    padding: 6px 4px;
+  }
+
+  #main .container .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: calc(100% - 100px);
+    padding-bottom: 30px;
+  }
+  #main .container-main__layout .overview .playlist-list__item {
+    height: 200px;
+  }
+  #main .container-main__layout .overview .song-content__item {
+    padding: 10px 8px 10px 0;
+  }
+  #main .container-main__layout .overview .album-list,
+#main .container-main__layout .overview .playlist-list {
+    grid-gap: 15px;
+  }
+  #main .container-main__layout .overview .album-list__image {
+    height: 150px;
+  }
+  #main .container .modal .modal-menu {
+    gap: 0;
+    margin-left: -10px;
+  }
+  #main .container .modal .modal-menu .modal-item {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: calc(50% - 10px);
+  }
+  #main .container-main__vip .btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+  #main .container-main__list li a {
+    width: 80px;
+  }
+  #main .container-main__list li:first-child a {
+    width: 100px;
+  }
+  #main .container-main__layout .overview .song-header__right .btn.btn--primary {
+    display: none;
+  }
+  #main .container-main__name {
+    font-size: 2.5rem;
+  }
+  #main .container-main__profile {
+    padding: 0 8px;
+  }
+  #main .container-main__image {
+    width: 65%;
+    margin-top: 20px;
   }
 }
 

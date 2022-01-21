@@ -55,8 +55,23 @@ window.addEventListener("load", function () {
   const controlVolume = document.querySelector(".music-control__volume");
   const songContentList = document.querySelector(".container-main__layout .overview .song-content__list");
   const progressMobile = document.querySelector(".progress-mobile div");
+  const musicAngleDown = document.querySelector("#music .angle-down");
   let playing = true;
   let index = JSON.parse(localStorage.getItem("index")) || 0;
+
+  // Music Mobile
+  musicImage.addEventListener("click", function() {
+    const musicMain = document.querySelector("#music .music-main");
+    const containerHeader = document.querySelector("#main .container-header");
+    containerHeader.style.zIndex = '1';
+    musicMain.classList.add("active");
+  })
+  musicAngleDown.addEventListener("click", function() {
+    const musicMain = document.querySelector("#music .music-main");
+    const containerHeader = document.querySelector("#main .container-header");
+    containerHeader.style.zIndex = '199';
+    musicMain.classList.remove("active");
+  })
 
   playBtn.addEventListener("click", handlePlayMusic);
   audio.addEventListener("timeupdate", handleUpdateTime);
@@ -735,4 +750,6 @@ window.addEventListener("load", function () {
     [...containerTab].forEach(item => item.classList.remove('active-tab'));
     containerTab[indexTab].classList.add("active-tab");
   })
+
+
 })

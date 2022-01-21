@@ -155,6 +155,77 @@
   }
   #music {
     height: auto;
+    .music-main.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      @include size(100%);
+      background-color: $bg-container;
+      flex-direction: column;
+      justify-content: unset;
+      padding: 10px 30px;
+    }
+    .music-main.active .music-info {
+      flex-direction: column-reverse;
+      position: relative;
+    }
+    .music-main.active .progress-container {
+      max-width: 80%;
+    }
+    .music-main.active .music-player__item {
+      font-size: 2.5rem;
+    }
+    .music-main.active .music-image {
+      @include size(350px);
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    .music-main.active .music-container {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: auto;
+    }
+    .music-main.active .music-player__item:first-child {
+      display: none;
+    }
+    .music-main.active .angle-down {
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: 30px;
+      font-size: 2.4rem;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .music-main.active .music-random,
+    .music-main.active .music-prev,
+    .music-main.active .music-redo {
+      display: block;
+    }
+    .music-main.active .music-progress {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .music-main.active .music-player {
+      justify-content: center;
+      gap: 0 40px;
+    }
+    .music-main.active .music-user__name {
+      font-size: 2rem;
+      max-width: 180px;
+    }
+    .music-main.active .music-user__author {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    .music-main.active .music-play {
+      padding: 6px;
+    }
+    .music-main.active .music-control {
+      margin-top: 10px;
+      display: flex;
+    }
     .music-control,
     .music-progress,
     .music-random,
@@ -181,6 +252,7 @@
     }
     .music-image {
       @include size(45px);
+      cursor: pointer;
     }
     .music-main {
       padding: 5px 10px;
@@ -234,6 +306,88 @@
         border-radius: 6px;
         transition: all 0.25s ease;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #music {
+    .music-main.active .progress-container {
+      max-width: 60%;
+    }
+    .music-main.active .music-image {
+      @include size(250px);
+    }
+    .music-main.active .music-player {
+      gap: 0 25px;
+    }
+    .music-main.active .music-player__item {
+      font-size: 2rem;
+    }
+    .music-main.active .music-progress {
+      max-width: 250px;
+    }
+    .music-nav__mobile-item a span {
+      font-size: 1rem;
+    }
+    .music-nav__mobile-item a {
+      padding: 6px 4px;
+    }
+  }
+  #main {
+    .container .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      @include size(100%);
+      max-height: calc(100% - 100px);
+      padding-bottom: 30px;
+    }
+    .container-main__layout .overview .playlist-list__item {
+      height: 200px;
+    }
+    .container-main__layout .overview .song-content__item {
+      padding: 10px 8px 10px 0;
+    }
+    .container-main__layout .overview .album-list,
+    .container-main__layout .overview .playlist-list {
+      grid-gap: 15px;
+    }
+    .container-main__layout .overview .album-list__image {
+      height: 150px;
+    }
+    .container .modal .modal-menu {
+      gap: 0;
+      margin-left: -10px;
+    }
+    .container .modal .modal-menu .modal-item {
+      margin-left: 10px;
+      margin-bottom: 10px;
+      width: calc(50% - 10px);
+    }
+    .container-main__vip .btn {
+      position: absolute;
+      top: 0;
+      right: 10px;
+    }
+    .container-main__list li a {
+      width: 80px;
+    }
+    .container-main__list li:first-child a {
+      width: 100px;
+    }
+    .container-main__layout .overview .song-header__right .btn.btn--primary {
+      display: none;
+    }
+    .container-main__name {
+      font-size: 2.5rem;
+    }
+    .container-main__profile {
+      padding: 0 8px;
+    }
+    .container-main__image {
+      width: 65%;
+      margin-top: 20px;
     }
   }
 }

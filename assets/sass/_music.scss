@@ -48,6 +48,9 @@
     &-user {
       display: flex;
       flex-direction: column;
+      .angle-down {
+        display: none;
+      }
       &__name {
         width: 120px;
         margin-bottom: 10px;
