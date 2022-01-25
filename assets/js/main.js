@@ -16,6 +16,13 @@ window.addEventListener("load", function () {
       duration: '03:35',
     },
     {
+      name: 'Teeth',
+      author: '5SOS',
+      image: 'https://i.ytimg.com/vi/xYcy2Lo5Msk/maxresdefault.jpg',
+      song: 'Teeth',
+      duration: '03:04',
+    },
+    {
       name: 'Chuỗi ngày vắng em',
       author: 'Châu Khải Phong',
       image: 'https://i.scdn.co/image/ab67616d0000b2737eb5530759478f87e73c49f9',
@@ -30,11 +37,32 @@ window.addEventListener("load", function () {
       duration: '03:52',
     },
     {
+      name: 'Solo',
+      author: 'Lyrics',
+      image: 'https://dotobjyajpegd.cloudfront.net/photo/5d511befdf04120cc46b2867',
+      song: 'Solo',
+      duration: '03:12',
+    },
+    {
       name: 'Gọi anh là Airline',
       author: 'Masew',
       image: 'https://i.ytimg.com/vi/pi34V4e2e5U/maxresdefault.jpg',
       song: 'Gọi anh là Airline',
       duration: '01:18',
+    },
+    {
+      name: 'Lời Yêu Ngây Dại',
+      author: 'Phạm Thành',
+      image: 'https://i.ytimg.com/vi/-or2feUTaak/maxresdefault.jpg',
+      song: 'Lời yêu ngây dại',
+      duration: '04:35',
+    },
+    {
+      name: 'Butterflies',
+      author: 'Zendaya',
+      image: 'https://i.ytimg.com/vi/yTUqGK6rfIw/maxresdefault.jpg',
+      song: 'Butterflies',
+      duration: '04:35',
     },
   ];
   const musicName = document.querySelector(".music-user__name");

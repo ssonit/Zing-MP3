@@ -660,6 +660,7 @@
                 align-items: center;
                 img {
                   @include size(40px);
+                  object-fit: cover;
                   border-radius: 6px;
                 }
                 &-image {
